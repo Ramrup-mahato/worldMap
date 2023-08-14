@@ -65,6 +65,7 @@ const Leaflet = ({ setSelectedCountry }) => {
             placeholder="Search for a country"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={(event)=>{event.key === 'Enter'&& handleSearch()}}
           />
           <AiOutlineSearch className="AiOutlineSearch" onClick={handleSearch} />
         </div>
